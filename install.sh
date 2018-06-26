@@ -18,4 +18,4 @@ fi
 
 echo "Building node-wiring-pi ... "
 node-gyp clean 2>&1 | tee -a ./install.log
-node-gyp configure build 2>&1 | tee -a ./install.log
+HOME=~/.electron-gyp node-gyp configure build --target=1.8.4 --arch=armv7l --dist-url=https://atom.io/download/electron 2>&1 | tee -a ./install.log
